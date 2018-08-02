@@ -17,7 +17,7 @@ import io.reactivex.Observable;
  * Created by Amolina on 02/02/17.
  */
 //make calls using androidnetworking library, getting Observable<Response>
-    //with retrofit is like
+//with retrofit is like
 // @POST("api/user/auth/google_signin")
 //    fun googleSignIn(@Body registerTokenDTO: RegisterTokenDTO): Single<AuthToken>
 @Singleton

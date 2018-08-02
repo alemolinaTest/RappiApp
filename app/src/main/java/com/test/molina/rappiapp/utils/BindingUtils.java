@@ -30,14 +30,13 @@ public final class BindingUtils {
 
     @BindingAdapter({"adapter"})
     public static void addPopularItems(RecyclerView recyclerView,
-                                          ArrayList<PopularItemViewModel> popularItems) {
+                                       ArrayList<PopularItemViewModel> popularItems) {
         PopularAdapter adapter = (PopularAdapter) recyclerView.getAdapter();
-        if(adapter != null) {
+        if (adapter != null) {
             adapter.clearItems();
             adapter.addItems(popularItems);
         }
     }
-
 
 
 }

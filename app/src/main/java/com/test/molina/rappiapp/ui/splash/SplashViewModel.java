@@ -42,7 +42,7 @@ public class SplashViewModel extends BaseViewModel<SplashNavigator> {
                 .observeOn(getSchedulerProvider().ui())
                 .subscribe(new Consumer<GenreResponse>() {
                     @Override
-                    public void accept(@NonNull GenreResponse genreResponse){
+                    public void accept(@NonNull GenreResponse genreResponse) {
                         if (genreResponse != null && genreResponse.getData() != null) {
                             saveGenresList(genreResponse.getData());
                         }
@@ -52,7 +52,7 @@ public class SplashViewModel extends BaseViewModel<SplashNavigator> {
                     @Override
                     public void accept(@NonNull Throwable throwable)
                             throws Exception {
-                       // setIsLoading(false);
+                        // setIsLoading(false);
                         getNavigator().handleError(throwable);
                     }
                 }));
@@ -90,7 +90,7 @@ public class SplashViewModel extends BaseViewModel<SplashNavigator> {
                 .observeOn(getSchedulerProvider().ui())
                 .subscribe(new Consumer<PopularMovieResponse>() {
                     @Override
-                    public void accept(@NonNull PopularMovieResponse genreResponse){
+                    public void accept(@NonNull PopularMovieResponse genreResponse) {
                         if (genreResponse != null && genreResponse.getData() != null) {
                             savePopularMoviesList(genreResponse.getData());
                         }
@@ -140,7 +140,7 @@ public class SplashViewModel extends BaseViewModel<SplashNavigator> {
                 .observeOn(getSchedulerProvider().ui())
                 .subscribe(new Consumer<TopRatedMovieResponse>() {
                     @Override
-                    public void accept(@NonNull TopRatedMovieResponse genreResponse){
+                    public void accept(@NonNull TopRatedMovieResponse genreResponse) {
                         if (genreResponse != null && genreResponse.getData() != null) {
                             saveTopRatedMoviesList(genreResponse.getData());
                         }
@@ -190,7 +190,7 @@ public class SplashViewModel extends BaseViewModel<SplashNavigator> {
                 .observeOn(getSchedulerProvider().ui())
                 .subscribe(new Consumer<UpcomingMovieResponse>() {
                     @Override
-                    public void accept(@NonNull UpcomingMovieResponse genreResponse){
+                    public void accept(@NonNull UpcomingMovieResponse genreResponse) {
                         if (genreResponse != null && genreResponse.getData() != null) {
                             saveUpcomingMoviesList(genreResponse.getData());
                         }

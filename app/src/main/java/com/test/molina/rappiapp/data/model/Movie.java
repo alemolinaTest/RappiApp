@@ -16,26 +16,26 @@ public class Movie {
 
     public Movie(Long id, Integer voteCount, String title, String poster_path, String original_language,
                  String original_title, String overview, Boolean adult) {
-        this.id=id;
-        this.voteCount=voteCount;
-        this.title=title;
-        this.poster_path=poster_path;
-        this.original_language=original_language;
-        this.original_title=original_title;
-        this.overview=overview;
-        this.adult=adult;
+        this.id = id;
+        this.voteCount = voteCount;
+        this.title = title;
+        this.poster_path = poster_path;
+        this.original_language = original_language;
+        this.original_title = original_title;
+        this.overview = overview;
+        this.adult = adult;
 
     }
 
-    public PopularMovie toPopularMovie(){
-        return new PopularMovie(id,voteCount,title,poster_path,original_language,original_title,overview,adult);
+    public PopularMovie toPopularMovie() {
+        return new PopularMovie(id, voteCount, title, poster_path, original_language, original_title, overview, adult);
     }
 
-    public TopRatedMovie toTopRatedMovie(){
-        return new TopRatedMovie(id,voteCount,title,poster_path,original_language,original_title,overview,adult);
+    public TopRatedMovie toTopRatedMovie() {
+        return new TopRatedMovie(id, voteCount, title, poster_path, original_language, original_title, overview, adult);
     }
 
-    public UpcomingMovie toUpcomingMovie(){
-        return new UpcomingMovie(id,voteCount,title,poster_path,original_language,original_title,overview,adult);
+    public UpcomingMovie toUpcomingMovie() {
+        return new UpcomingMovie(id, voteCount, title, poster_path, original_language, original_title, overview, adult);
     }
 }

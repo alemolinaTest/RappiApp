@@ -28,7 +28,7 @@ import static android.os.Build.VERSION.SDK_INT;
  * Created by Amolina on 02/02/17.
  */
 //extend annotation
-public abstract class BaseExtraActivity<T extends ViewDataBinding, V extends BaseViewModel,X extends BaseViewModel> extends AppCompatActivity
+public abstract class BaseExtraActivity<T extends ViewDataBinding, V extends BaseViewModel, X extends BaseViewModel> extends AppCompatActivity
         implements BaseFragment.Callback {
 
     // TODO
@@ -151,8 +151,8 @@ public abstract class BaseExtraActivity<T extends ViewDataBinding, V extends Bas
     /**
      * @return layout resource id
      */
-    public abstract @LayoutRes int getLayoutId();
-
+    public abstract @LayoutRes
+    int getLayoutId();
 
 
 }

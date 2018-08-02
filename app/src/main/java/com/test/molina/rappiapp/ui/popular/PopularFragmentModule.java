@@ -1,13 +1,6 @@
 package com.test.molina.rappiapp.ui.popular;
 
-import android.arch.lifecycle.ViewModelProvider;
 import android.support.v7.widget.LinearLayoutManager;
-
-import com.test.molina.rappiapp.ViewModelProviderFactory;
-import com.test.molina.rappiapp.data.DataManager;
-import com.test.molina.rappiapp.rx.SchedulerProvider;
-
-import javax.inject.Singleton;
 
 import dagger.Module;
 import dagger.Provides;
@@ -27,7 +20,6 @@ public class PopularFragmentModule {
     LinearLayoutManager provideLinearLayoutManager(PopularFragment fragment) {
         return new LinearLayoutManager(fragment.getActivity());
     }
-
 
 
 }

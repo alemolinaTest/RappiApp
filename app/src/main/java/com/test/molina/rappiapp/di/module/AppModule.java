@@ -2,7 +2,6 @@
 package com.test.molina.rappiapp.di.module;
 
 import android.app.Application;
-import android.arch.lifecycle.ViewModelProvider;
 import android.arch.persistence.room.Room;
 import android.content.Context;
 import android.support.annotation.NonNull;
@@ -10,7 +9,6 @@ import android.support.annotation.NonNull;
 import com.facebook.stetho.okhttp3.StethoInterceptor;
 import com.test.molina.rappiapp.BuildConfig;
 import com.test.molina.rappiapp.R;
-import com.test.molina.rappiapp.ViewModelProviderFactory;
 import com.test.molina.rappiapp.data.AppDataManager;
 import com.test.molina.rappiapp.data.DataManager;
 import com.test.molina.rappiapp.data.local.db.AppDatabase;
@@ -120,7 +118,6 @@ public class AppModule {
                 .setFontAttrId(R.attr.fontPath)
                 .build();
     }
-
 
 
 }

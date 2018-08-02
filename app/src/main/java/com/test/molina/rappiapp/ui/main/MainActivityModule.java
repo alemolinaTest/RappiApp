@@ -7,8 +7,6 @@ import com.test.molina.rappiapp.data.DataManager;
 import com.test.molina.rappiapp.rx.SchedulerProvider;
 import com.test.molina.rappiapp.ui.popular.PopularViewModel;
 
-import javax.inject.Singleton;
-
 import dagger.Module;
 import dagger.Provides;
 
@@ -28,7 +26,6 @@ public class MainActivityModule {
     MainPagerAdapter provideMainPagerAdapter(MainActivity activity) {
         return new MainPagerAdapter(activity.getSupportFragmentManager());
     }
-
 
 
     @Provides

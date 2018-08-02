@@ -1,7 +1,6 @@
 package com.test.molina.rappiapp.ui.popular;
 
 
-import android.arch.lifecycle.Observer;
 import android.arch.lifecycle.ViewModelProvider;
 import android.arch.lifecycle.ViewModelProviders;
 import android.os.Bundle;
@@ -10,15 +9,12 @@ import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.view.View;
 
-
-import com.test.molina.rappiapp.R;
-
 import com.test.molina.rappiapp.BR;
+import com.test.molina.rappiapp.R;
+import com.test.molina.rappiapp.databinding.FragmentPopularBinding;
+import com.test.molina.rappiapp.ui.base.BaseFragment;
 
 import java.util.List;
-
-import com.test.molina.rappiapp.ui.base.BaseFragment;
-import com.test.molina.rappiapp.databinding.FragmentPopularBinding;
 
 import javax.inject.Inject;
 

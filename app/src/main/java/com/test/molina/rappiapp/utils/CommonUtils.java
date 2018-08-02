@@ -8,7 +8,6 @@ import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.provider.Settings;
 
-
 import com.test.molina.rappiapp.R;
 
 import java.io.IOException;
@@ -78,11 +77,11 @@ public final class CommonUtils {
         return new String(buffer, "UTF-8");
     }
 
-public static String getFormattedDate(Date date) {
-    SimpleDateFormat dateFormat = new SimpleDateFormat(AppConstants.DATE_FORMAT, Locale.US);
-    dateFormat.setTimeZone(TimeZone.getTimeZone("UTC"));
-    return dateFormat.format(date);
-}
+    public static String getFormattedDate(Date date) {
+        SimpleDateFormat dateFormat = new SimpleDateFormat(AppConstants.DATE_FORMAT, Locale.US);
+        dateFormat.setTimeZone(TimeZone.getTimeZone("UTC"));
+        return dateFormat.format(date);
+    }
 
     public static String getTimeStamp() {
         return new SimpleDateFormat(AppConstants.TIMESTAMP_FORMAT, Locale.US).format(new Date());

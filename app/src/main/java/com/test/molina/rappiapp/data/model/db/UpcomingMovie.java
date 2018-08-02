@@ -56,20 +56,20 @@ public class UpcomingMovie {
     public Boolean adult;
 
 
-    public Movie toMovie(){
-        return new Movie(id,voteCount,title,poster_path,original_language,original_title,overview,adult);
+    public Movie toMovie() {
+        return new Movie(id, voteCount, title, poster_path, original_language, original_title, overview, adult);
     }
 
     public UpcomingMovie(Long id, Integer voteCount, String title, String poster_path, String original_language,
-                        String original_title, String overview, Boolean adult) {
-        this.id=id;
-        this.voteCount=voteCount;
-        this.title=title;
-        this.poster_path=poster_path;
-        this.original_language=original_language;
-        this.original_title=original_title;
-        this.overview=overview;
-        this.adult=adult;
+                         String original_title, String overview, Boolean adult) {
+        this.id = id;
+        this.voteCount = voteCount;
+        this.title = title;
+        this.poster_path = poster_path;
+        this.original_language = original_language;
+        this.original_title = original_title;
+        this.overview = overview;
+        this.adult = adult;
 
     }
 }

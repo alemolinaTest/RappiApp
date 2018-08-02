@@ -153,39 +153,4 @@ public class AppDbHelper implements DbHelper {
         });
     }
 
-/*
-    @Override
-    public Observable<Boolean> isOptionEmpty() {
-        return Observable.fromCallable(new Callable<Boolean>() {
-            @Override
-            public Boolean call() throws Exception {
-                return mAppDatabase.optionDao().loadAll().isEmpty();
-            }
-        });
-    }
-
-    @Override
-    public Observable<Boolean> insertUser(final User user) {
-        return Observable.fromCallable(new Callable<Boolean>() {
-            @Override
-            public Boolean call() throws Exception {
-                mAppDatabase.userDao().insert(user);
-                return true;
-            }
-        });
-    }
-
-
-    @Override
-    public Observable<Boolean> saveOption(final Option option) {
-        return Observable.fromCallable(new Callable<Boolean>() {
-            @Override
-            public Boolean call() throws Exception {
-                mAppDatabase.optionDao().insert(option);
-                return true;
-            }
-        });
-    }
-
-*/
 }

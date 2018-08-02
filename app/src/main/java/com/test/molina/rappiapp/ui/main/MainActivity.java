@@ -11,22 +11,18 @@ import android.support.v4.app.Fragment;
 import android.support.v7.widget.SearchView;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
+
+import com.test.molina.rappiapp.BR;
+import com.test.molina.rappiapp.R;
+import com.test.molina.rappiapp.databinding.ActivityMainBinding;
+import com.test.molina.rappiapp.ui.base.BaseActivity;
+import com.test.molina.rappiapp.ui.popular.PopularViewModel;
 
 import javax.inject.Inject;
-import javax.inject.Singleton;
 
 import dagger.android.AndroidInjector;
 import dagger.android.DispatchingAndroidInjector;
 import dagger.android.support.HasSupportFragmentInjector;
-
-import com.test.molina.rappiapp.R;
-import com.test.molina.rappiapp.BR;
-import com.test.molina.rappiapp.databinding.ActivityMainBinding;
-import com.test.molina.rappiapp.ui.base.BaseActivity;
-import com.test.molina.rappiapp.ui.base.BaseExtraActivity;
-import com.test.molina.rappiapp.ui.popular.PopularFragment;
-import com.test.molina.rappiapp.ui.popular.PopularViewModel;
 
 /**
  * Created by Amolina on 02/02/17.
@@ -36,10 +32,10 @@ public class MainActivity extends BaseActivity<ActivityMainBinding, MainViewMode
 
     @Inject
     ViewModelProvider.Factory mViewModelFactory;
-/*
-    @Inject
-    PopularViewModel mPopularViewModel;
-*/
+    /*
+        @Inject
+        PopularViewModel mPopularViewModel;
+    */
     @Inject
     MainViewModel mMainViewModel;
 
@@ -104,7 +100,7 @@ public class MainActivity extends BaseActivity<ActivityMainBinding, MainViewMode
     }
 
     public PopularViewModel getPopularViewModel() {
-        mPopularViewModel = ViewModelProviders.of(this,mViewModelFactory).get(PopularViewModel.class);
+        mPopularViewModel = ViewModelProviders.of(this, mViewModelFactory).get(PopularViewModel.class);
         return mPopularViewModel;
     }
 
@@ -121,7 +117,7 @@ public class MainActivity extends BaseActivity<ActivityMainBinding, MainViewMode
                 .getSearchableInfo(getComponentName()));
         searchView.setMaxWidth(Integer.MAX_VALUE);
 
-        searchView.setOnCloseListener(new SearchView.OnCloseListener(){
+        searchView.setOnCloseListener(new SearchView.OnCloseListener() {
             @Override
             public boolean onClose() {
                 mPopularViewModel.fetchAll("");

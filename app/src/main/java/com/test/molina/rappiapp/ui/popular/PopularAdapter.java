@@ -8,10 +8,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.test.molina.rappiapp.ui.base.BaseViewHolder;
-import com.test.molina.rappiapp.databinding.ItemPopularViewBinding;
 import com.test.molina.rappiapp.databinding.ItemPopularEmptyViewBinding;
-
+import com.test.molina.rappiapp.databinding.ItemPopularViewBinding;
+import com.test.molina.rappiapp.ui.base.BaseViewHolder;
 
 import java.util.ArrayList;
 import java.util.List;

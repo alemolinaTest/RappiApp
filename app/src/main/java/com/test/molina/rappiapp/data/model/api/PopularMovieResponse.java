@@ -2,7 +2,6 @@ package com.test.molina.rappiapp.data.model.api;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
-import com.test.molina.rappiapp.data.model.Movie;
 import com.test.molina.rappiapp.data.model.db.PopularMovie;
 
 import java.util.List;

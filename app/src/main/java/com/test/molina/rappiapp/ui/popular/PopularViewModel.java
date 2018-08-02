@@ -3,7 +3,6 @@ package com.test.molina.rappiapp.ui.popular;
 import android.arch.lifecycle.MutableLiveData;
 import android.databinding.ObservableArrayList;
 
-
 import com.test.molina.rappiapp.data.DataManager;
 import com.test.molina.rappiapp.data.model.db.PopularMovie;
 import com.test.molina.rappiapp.data.model.db.TopRatedMovie;
@@ -15,12 +14,8 @@ import com.test.molina.rappiapp.ui.base.BaseViewModel;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.inject.Singleton;
-
 import io.reactivex.Observable;
 import io.reactivex.ObservableSource;
-import io.reactivex.annotations.NonNull;
-import io.reactivex.functions.Consumer;
 import io.reactivex.functions.Function;
 
 /**
@@ -39,7 +34,7 @@ public class PopularViewModel extends BaseViewModel<PopularNavigator> {
 
 
     public PopularViewModel(DataManager dataManager,
-                               SchedulerProvider schedulerProvider) {
+                            SchedulerProvider schedulerProvider) {
         super(dataManager, schedulerProvider);
         popularItemsLiveData = new MutableLiveData<>();
         topRatedItemsLiveData = new MutableLiveData<>();
@@ -48,14 +43,14 @@ public class PopularViewModel extends BaseViewModel<PopularNavigator> {
     }
 
 
-    public void fetchAll(String filter){
+    public void fetchAll(String filter) {
         fetchPopularRepo(filter);
         fetchTopRatedRepo(filter);
         fetchUpcomingRepo(filter);
     }
 
 
-    public void fetchPopularRepo(String searching ) {
+    public void fetchPopularRepo(String searching) {
         setIsLoading(true);
         getCompositeDisposable().add(getDataManager()
                 .getAllLocalPopular()
@@ -63,7 +58,7 @@ public class PopularViewModel extends BaseViewModel<PopularNavigator> {
                     //Converts an sequence into an ObservableSource that emits the items in the sequence
                     return Observable.fromIterable(questions);
                 })
-                .filter(movie->movie.overview.contains(searching))
+                .filter(movie -> movie.overview.contains(searching))
                 .toList()
                 .subscribeOn(getSchedulerProvider().io())
                 .observeOn(getSchedulerProvider().ui())
@@ -98,7 +93,7 @@ public class PopularViewModel extends BaseViewModel<PopularNavigator> {
                     //Converts an sequence into an ObservableSource that emits the items in the sequence
                     return Observable.fromIterable(questions);
                 })
-                .filter(movie->movie.title.contains(searching))
+                .filter(movie -> movie.title.contains(searching))
                 .toList()
                 .subscribeOn(getSchedulerProvider().io())
                 .observeOn(getSchedulerProvider().ui())
@@ -133,7 +128,7 @@ public class PopularViewModel extends BaseViewModel<PopularNavigator> {
                     //Converts an sequence into an ObservableSource that emits the items in the sequence
                     return Observable.fromIterable(questions);
                 })
-                .filter(movie->movie.title.contains(searching))
+                .filter(movie -> movie.title.contains(searching))
                 .toList()
                 .subscribeOn(getSchedulerProvider().io())
                 .observeOn(getSchedulerProvider().ui())

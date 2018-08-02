@@ -3,6 +3,7 @@ package com.test.molina.rappiapp.ui.splash;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+
 import com.test.molina.rappiapp.BR;
 import com.test.molina.rappiapp.R;
 import com.test.molina.rappiapp.databinding.ActivitySplashBinding;

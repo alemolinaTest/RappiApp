@@ -2,8 +2,6 @@ package com.test.molina.rappiapp.ui.popular;
 
 import android.databinding.ObservableField;
 
-import com.test.molina.rappiapp.data.remote.ApiEndPoint;
-
 /**
  * Created by Amolina on 02/02/17.
  */

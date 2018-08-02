@@ -86,8 +86,6 @@ public abstract class BaseDialog extends DialogFragment {
     }
 
 
-
-
     public void hideLoading() {
         if (mActivity != null) {
             mActivity.hideLoading();
