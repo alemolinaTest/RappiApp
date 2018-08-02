@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">RappiApp</string>
+    <!--empty state-->
+    <string name="empty_screen">We do not have anything\nhere right now.</string>
+    <string name="please_retry">Please Retry</string>
+    <string name="retry">Retry</string>
+    <!--about fragment-->
+    <string name="project_info">Alejandro Molina Base Application Model. This app is a way to show how i work. Using DI Dagger 2, MVVM design pattern, ROOM, Glide, Android Networking.</string>
+
+    <!--main pages-->
+    <string name="title">Movies</string>
+    <string name="popular">Popular</string>
+    <string name="top_rated">Top Rated</string>
+    <string name="upcoming">Upcoming</string>
+
+    <string name="action_search">Search</string>
+
+</resources>
